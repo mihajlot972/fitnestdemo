@@ -4,7 +4,7 @@ const blogEntries = await getCollection("blogcollection");
 console.log(blogEntries)
 ---
 <p>Blogovi</p>
-<a href="/blog/kako-smo-dosli-do-1m-korisnika-u-369-dana">1m korisnika 369d</a>
+<a href="/fitnestdemo/blog/kako-smo-dosli-do-1m-korisnika-u-369-dana">1m korisnika 369d</a>
 
 
 <!-- Iz nekog razloga ne povlaci kolekciju za sad. -->
@@ -12,7 +12,7 @@ console.log(blogEntries)
   {
     blogEntries.map((blogPostEntry: any) => (
       <li>
-        <a href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
+        <a href={`/fitnestdemo/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
         <time datetime={blogPostEntry.data.publishedDate.toISOString()}>
           {blogPostEntry.data.publishedDate.toDateString()}
         </time>
